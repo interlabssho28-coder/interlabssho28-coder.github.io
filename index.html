@@ -188,7 +188,7 @@ footer{color:var(--muted);text-align:center;font-size:13px;padding:30px 0 40px}
   <div class="kicker">// EXPERIENCIA</div>
   <h2>Trayectoria</h2>
   <div class="tl">
-    <div class="tl-i reveal"><div class="when">Actualidad</div><h3>Desarrollador Odoo y Automatización</h3><div class="org">BSM Consultoria</div>
+    <div class="tl-i reveal"><div class="when">Actualidad</div><h3>Desarrollador Odoo y Automatización</h3><div class="org">DIMSOP</div>
       <ul><li>Módulos de nómina venezolana en Odoo (Python/XML) para un entorno multiempresa.</li><li>FAOV, INCES y archivos TXT para pagos bancarios y BANAVIH.</li><li>Integraciones con GLPI, Wazuh y SiteScope vía XML-RPC.</li></ul></div>
     <div class="tl-i reveal"><div class="when">2019 — hoy</div><h3>Consultor Senior de Observabilidad</h3><div class="org">BSM Consultoria</div>
       <ul><li>Implementaciones de Zabbix y Grafana para banca, con capacitación incluida.</li><li>Migración de HP BSM a OBM/APM 2020 y de SiteScope a 2020.10.</li><li>UCMDB, Asset Manager y Connect-IT integrados con SCCM y vCenter.</li></ul></div>
@@ -240,7 +240,7 @@ function tick(){[...bars.children].forEach(s=>{const v=60+Math.random()*40;s.sty
   document.getElementById('lat').textContent='▲ '+(150+Math.floor(Math.random()*120))+'ms'}
 tick();setInterval(tick,2500);
 // terminal
-const lines=[['$ ','zabbix_get -s core-db -k system.cpu.util'],['','→ 23.4 %'],['$ ','odoo nomina --empresa GICS --quincena'],['','→ 0 errores · recibos generados ✓']];
+const lines=[['$ ','zabbix_get -s core-db -k system.cpu.util'],['','→ 23.4 %'],['$ ','odoo nomina --empresa TEST --quincena'],['','→ 0 errores · recibos generados ✓']];
 const term=document.getElementById('term');let li=0,ci=0;
 function type(){if(li>=lines.length){setTimeout(()=>{term.innerHTML='';li=0;ci=0;type()},3000);return}
   const [p,t]=lines[li];if(ci===0){term.insertAdjacentHTML('beforeend','<div><span class="p">'+p+'</span><span></span></div>')}
